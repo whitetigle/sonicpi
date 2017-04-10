@@ -1,0 +1,25 @@
+use_bpm 120
+
+synth = :piano
+note = 0
+pause = 2.0
+
+mario = (ring
+         76, :r, 76, :r, :r, :r, 76, :r, :r, :r, 72, :r, 76, :r, :r, :r, 79, :r, :r, :r, 67, :r, :r, :r, :r, :r, :r, :r, :r,
+         72, :r, :r, :r, 67, :r, :r, :r, 64, :r, :r, :r, 69, :r, :r, :r, 71, :r, :r, :r, 70, :r, 69, :r, :r, :r, 67, :r, 76, :r, 79, :r, 81, :r, :r, :r, 77, :r, 79, :r, :r, :r, 76, :r, :r, :r, 72, :r, 74, :r, 71, :r, :r, :r,
+         72, :r, :r, :r, 67, :r, :r, :r, 64, :r, :r, :r, 69, :r, :r, :r, 71, :r, :r, :r, 70, :r, 69, :r, :r, :r, 67, :r, 76, :r, 79, :r, 81, :r, :r, :r, 77, :r, 79, :r, :r, :r, 76, :r, :r, :r, 72, :r, 74, :r, 71, :r, :r, :r,
+         48, :r, :r, :r, 79, :r, 78, :r, 77, :r, 75, :r, 60, :r, 76, :r, 53, :r, 68, :r, 69, :r, 72, :r, 60, :r, 69, :r, 72, :r, 74, :r, 48, :r, :r, :r, 79, :r, 78, :r, 77, :r, 75, :r, 55, :r, 76, :r, :r, :r, 84, :r, :r, :r, 84, :r, 84, :r,
+         72, :r, 72, :r, :r, :r, 72, :r, :r, :r, 72, :r, 74, :r, :r, :r, 76, :r, 72, :r, :r, :r, 69, :r, 67, :r, :r, :r, 43, :r, :r, :r, 72, :r, 72, :r, :r, :r, 72, :r, :r, :r, 72, :r, 74, :r, 76, :r, 55, :r, :r, 24, 48, :r, :r, 24, 43, :r, :r, :r, 72, :r, 72, :r, :r, :r, 72, :r, :r, :r, 72, :r, 74, :r, :r, :r, 76, :r, 72, :r, :r, :r, 69, :r, 67, :r, :r, :r, 43,
+         )
+
+live_loop :habanera do
+  use_synth :piano
+  note = mario.tick
+  play note
+  sleep pause
+end
+
+# 1 - changer le rythme pour que le thème soit joué à la bonne vitesse
+# 2 - ajouter une live_loop de mélodie avec un instrument différent
+# 3 - ajouter une live_loop de percussions
+# 4 - ajoutez un son de cymbales pour rythmer le morceau
